@@ -13,7 +13,7 @@
 <body onload="load();">
     <div id="front">
         <img id="frontImg" src="Parts/Images/front.png" alt="">
-        <textarea id="textFront" onkeypress="updateLabelFront(event)"></textarea>
+        <textarea id="textFront" onchange="updateLabelFront(event)" onkeyup="updateLabelFront(event)"></textarea>
         <div id="copyFront"></div>
         <div id="goBack"></div>
         <div id="dateFront"></div>
@@ -21,7 +21,7 @@
     <div id="back">
         <img id="backImg" src="Parts/Images/back.png" alt="">
         <div id="goFront"></div>
-        <textarea id="textBack" onkeypress="updateLabelBack(event)"></textarea>
+        <textarea id="textBack" onchange="updateLabelBack(event)" onkeyup="updateLabelBack(event)"></textarea>
         <div id="copyBack"></div>
         <div id="dateBack"></div>
     </div>

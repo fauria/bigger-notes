@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>CYLastWindowPosition</key>
-	<string>{274, 125}</string>
+	<string>{476, 238}</string>
 	<key>ContentSplitViewGeometry</key>
 	<dict>
 		<key>ContentSplitViewConfig</key>
@@ -19,7 +19,7 @@
 		</array>
 	</dict>
 	<key>ContentViewType</key>
-	<integer>0</integer>
+	<integer>5</integer>
 	<key>DeploymentOptions</key>
 	<dict>
 		<key>Destination</key>
@@ -31,7 +31,7 @@
 		<key>Save</key>
 		<true/>
 		<key>SavePath</key>
-		<string>/Users/fernando/Proyectos/Dashcode/Bigger Notes</string>
+		<string>/Users/fernando/Proyectos/github/temp</string>
 		<key>enableSimulation</key>
 		<true/>
 		<key>simulatedHost</key>
@@ -84,9 +84,7 @@
 		<key>Objects view last selections</key>
 		<array>
 			<array>
-				<integer>0</integer>
-				<integer>0</integer>
-				<integer>1</integer>
+				<integer>5</integer>
 			</array>
 		</array>
 		<key>Opened Steps</key>

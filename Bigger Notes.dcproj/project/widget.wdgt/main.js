@@ -1,7 +1,8 @@
 /*  
 //   By Fer Uría 
 //   fernando AT vacadiez DOT com
-//   MIT License and all this stuf...
+//   MIT License and all that stuf...
+//
 */
 
 var dateFormat = function () {
@@ -129,6 +130,8 @@ Date.prototype.format = function (mask, utc) {
 function load()
 {
     dashcode.setupParts();
+    getContents();
+    getTimestamps();
 }
 
 //
@@ -149,6 +152,8 @@ function remove()
 function hide()
 {
     // Stop any timers to prevent CPU usage
+    saveContents();
+    saveTimestamps();
 }
 
 //
@@ -158,6 +163,8 @@ function hide()
 function show()
 {
     // Restart any timers that were stopped on hide
+    getContents();
+    getTimestamps();
 }
 
 //
@@ -230,15 +237,31 @@ if (window.widget) {
 function getContents(){
    if(window.widget)
    {
-       var contentFront = widget.preferenceForKey("contentFront");
+       var contentFront = widget.preferenceForKey("contentFront_"+widget.identifier);
        if (contentFront && contentFront.length > 0)
        {
-           textFront.innerText = contentFront;
+           document.getElementById("textFront").innerText = contentFront;
        }
-       var contentBack = widget.preferenceForKey("contentBack");
+       var contentBack = widget.preferenceForKey("contentBack_"+widget.identifier);
        if (contentBack && contentBack.length > 0)
        {
-           textBack.innerText = contentBack;
+            document.getElementById("textBack").innerText = contentBack;
+       }
+   }
+}
+
+function getTimestamps(){
+    if(window.widget)
+    {
+       var timestampFront = widget.preferenceForKey("timestampFront_"+widget.identifier);
+		if (timestampFront && timestampFront.length > 0)
+       {
+           document.getElementById("dateFront").innerText = timestampFront;
+       }
+       var timestampBack = widget.preferenceForKey("timestampBack_"+widget.identifier);
+       if (timestampBack && timestampBack.length > 0)
+       {
+             document.getElementById("dateBack").innerText = timestampBack;
        }
    }
 }
@@ -246,9 +269,18 @@ function getContents(){
 function saveContents(){
    if(window.widget)
    {
-       widget.setPreferenceForKey(textFront.innerText,"contentFront");
-       widget.setPreferenceForKey(textBack.innerText,"contentBack");
+       widget.setPreferenceForKey(document.getElementById("textFront").value, "contentFront_"+widget.identifier);
+       widget.setPreferenceForKey(document.getElementById("textBack").value, "contentBack_"+widget.identifier);       
    }
+}
+
+function saveTimestamps(){
+    if(window.widget)
+    {
+        widget.setPreferenceForKey(document.getElementById("dateFront").innerText, "timestampFront_"+widget.identifier);
+        widget.setPreferenceForKey(document.getElementById("dateBack").innerText, "timestampBack_"+widget.identifier);
+
+    }
 }
 
 function updateLabelFront(event)
@@ -263,6 +295,7 @@ function updateLabelFront(event)
         document.getElementById("dateFront").innerText = now.format("dd/mmm/yyyy HH:MM");
     }
     saveContents();
+    saveTimestamps();
 }
 
 function updateLabelBack(event)
@@ -277,6 +310,7 @@ function updateLabelBack(event)
         document.getElementById("dateBack").innerText = now.format("dd/mmm/yyyy HH:MM");
     }
     saveContents();
+    saveTimestamps();
 }
 
 
