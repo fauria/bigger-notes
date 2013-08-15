@@ -14,12 +14,12 @@
 		<integer>0</integer>
 		<key>sizes</key>
 		<array>
-			<string>{{0, 0}, {1195, 402}}</string>
-			<string>{{0, 412}, {1195, 361}}</string>
+			<string>{{0, 0}, {1675, 533}}</string>
+			<string>{{0, 543}, {1675, 530}}</string>
 		</array>
 	</dict>
 	<key>ContentViewType</key>
-	<integer>5</integer>
+	<integer>0</integer>
 	<key>DeploymentOptions</key>
 	<dict>
 		<key>Destination</key>
@@ -45,12 +45,12 @@
 		<integer>0</integer>
 		<key>sizes</key>
 		<array>
-			<string>{{0, 0}, {244, 794}}</string>
-			<string>{{245, 0}, {1196, 794}}</string>
+			<string>{{0, 0}, {244, 1094}}</string>
+			<string>{{245, 0}, {1676, 1094}}</string>
 		</array>
 	</dict>
 	<key>MainWindowFrame</key>
-	<string>0 63 1440 815 0 0 1440 878 </string>
+	<string>0 63 1920 1115 0 0 1920 1178 </string>
 	<key>NavigatorSplitViewGeometry</key>
 	<dict>
 		<key>ContentSplitViewConfig</key>
@@ -61,8 +61,8 @@
 		<integer>0</integer>
 		<key>sizes</key>
 		<array>
-			<string>{{0, 0}, {246, 369}}</string>
-			<string>{{0, 379}, {246, 394}}</string>
+			<string>{{0, 0}, {246, 514}}</string>
+			<string>{{0, 524}, {246, 549}}</string>
 		</array>
 	</dict>
 	<key>Widget</key>
@@ -84,7 +84,9 @@
 		<key>Objects view last selections</key>
 		<array>
 			<array>
-				<integer>5</integer>
+				<integer>0</integer>
+				<integer>0</integer>
+				<integer>1</integer>
 			</array>
 		</array>
 		<key>Opened Steps</key>

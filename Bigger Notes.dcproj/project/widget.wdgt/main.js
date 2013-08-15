@@ -227,6 +227,29 @@ if (window.widget) {
     widget.onsync = sync;
 }
 
+function getContents(){
+   if(window.widget)
+   {
+       var contentFront = widget.preferenceForKey("contentFront");
+       if (contentFront && contentFront.length > 0)
+       {
+           textFront.innerText = contentFront;
+       }
+       var contentBack = widget.preferenceForKey("contentBack");
+       if (contentBack && contentBack.length > 0)
+       {
+           textBack.innerText = contentBack;
+       }
+   }
+}
+
+function saveContents(){
+   if(window.widget)
+   {
+       widget.setPreferenceForKey(textFront.innerText,"contentFront");
+       widget.setPreferenceForKey(textBack.innerText,"contentBack");
+   }
+}
 
 function updateLabelFront(event)
 {
@@ -239,19 +262,21 @@ function updateLabelFront(event)
         var now = new Date();
         document.getElementById("dateFront").innerText = now.format("dd/mmm/yyyy HH:MM");
     }
+    saveContents();
 }
 
 function updateLabelBack(event)
 {
-    if(document.getElementById("textFront").value == '')
+    if(document.getElementById("textBack").value == '')
     {
-        document.getElementById("dateFront").innerText =  '';
+        document.getElementById("dateBack").innerText =  '';
     }
     else
     {
         var now = new Date();
         document.getElementById("dateBack").innerText = now.format("dd/mmm/yyyy HH:MM");
     }
+    saveContents();
 }
 
 

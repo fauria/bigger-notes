@@ -13,7 +13,7 @@
 <body onload="load();" apple-part="com.apple.Dashcode.part.StackLayout">
     <div id="front">
         <img id="frontImg" src="Parts/Images/front.png" alt="" apple-locked="true" apple-part="com.apple.Dashcode.part.frontimage" apple-style="image-theme: 1; image-shape: 3; image-opacity: 1.00; image-top-color: 1.0000,1.0000,1.0000; image-bottom-color: 0.6154,0.6154,0.6154; image-radius: 12,12,12,12; image-border: 1; image-border-color: 0.5294,0.5294,0.5294; image-border-width: 1; shine-strength: 0.9; shine-alpha-level: 0.67; shine-height: 0.50; glass-arc-height: 0.06; shadow-include-shadow: 1; shadow-blur: 9.00; shadow-offset: -1.00,-6.00; shadow-color: 0.0000,0.0000,0.0000,0.3333;">
-        <textarea id="textFront" apple-part="com.apple.Dashcode.part.textarea" onkeypress="updateLabelFront(event)"></textarea>
+        <textarea id="textFront" apple-part="com.apple.Dashcode.part.textarea" onchange="updateLabelFront(event)" onkeyup="updateLabelFront(event)"></textarea>
         <div id="copyFront" apple-part="com.apple.Dashcode.part.glassbutton" class="apple-no-children"></div>
         <div id="goBack" apple-part="com.apple.Dashcode.part.glassbutton" class="apple-no-children"></div>
         <div id="dateFront" apple-part="com.apple.Dashcode.part.text" class="apple-text apple-no-children" apple-default-image-visibility="hidden" apple-text-overflow="ellipsis"></div>
@@ -21,7 +21,7 @@
     <div id="back">
         <img id="backImg" src="Parts/Images/back.png" alt="" apple-locked="true" apple-part="com.apple.Dashcode.part.backimage" apple-style=" image-radius: 12,12,12,12; image-border: 1; image-border-color: 0.1500,0.1500,0.1500; image-border-width: 3; shadow-include-shadow: 1; shadow-blur: 9.00; shadow-offset: -1.00,-6.00; shadow-color: 0.0000,0.0000,0.0000,0.3333;">
         <div id="goFront" class="apple-no-children" apple-part="com.apple.Dashcode.part.glassbutton"></div>
-        <textarea id="textBack" apple-part="com.apple.Dashcode.part.textarea" onkeypress="updateLabelBack(event)"></textarea>
+        <textarea id="textBack" apple-part="com.apple.Dashcode.part.textarea" onchange="updateLabelBack(event)" onkeyup="updateLabelBack(event)"></textarea>
         <div id="copyBack" apple-part="com.apple.Dashcode.part.glassbutton" class="apple-no-children"></div>
         <div id="dateBack" apple-part="com.apple.Dashcode.part.text" class="apple-text apple-no-children" apple-default-image-visibility="hidden" apple-text-overflow="ellipsis"></div>
     </div>
