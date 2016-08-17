@@ -9,3 +9,5 @@ Installation instructions:
 2. Unzip it, and rename the folder "bigger-notes-master" to "bigger-notes.wdgt".
 3. Now, the icon should have changed from a blue folder to a black dashboard.
 4. Finally, double click "bigger-notes.wdgt" to install it.
+
+![Bigger Notes Screenshot](https://raw.githubusercontent.com/fauria/bigger-notes/master/Images/bigger-notes-screenshot.png)
